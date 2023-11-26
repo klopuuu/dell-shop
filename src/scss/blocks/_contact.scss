@@ -1,0 +1,194 @@
+.contact {
+  height: 676px;
+  background-color: var(--beige-color);
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 15px;
+    top: 184px;
+    width: 1635px;
+    height: 471.818px;
+    flex-shrink: 0;
+    z-index: 0;
+
+    background-image: url("./../img/contact/contacts.svg");
+    background-repeat: no-repeat;
+  }
+
+  .info-item {
+    flex-direction: column;
+    gap: 60px;
+
+    .descr {
+      font-size: 22px;
+      max-width: 358px;
+    }
+
+    .name {
+      font-size: 18px;
+    }
+
+    @include mediaLaptop {
+      .name {
+        font-size: 15px;
+      }
+
+      .descr {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include mediaLaptop {
+    height: 100%;
+  }
+}
+
+.contact__body {
+  position: absolute;
+  margin-top: -346px;
+
+  @include mediaLaptop {
+    margin-top: 0;
+    position: relative;
+  }
+}
+
+.contact__flex {
+  display: flex;
+  border-radius: 10px;
+
+  .title-1 {
+    margin-bottom: 18px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  @include mediaLaptop {
+    overflow: visible;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.contact__info {
+  background-color: var(--page-bg);
+  flex-shrink: 0;
+  width: 700px;
+  height: 842px;
+
+  padding: 100px 0 0 100px;
+
+  @include mediaMobile {
+    width: 375px;
+  }
+
+  @include mediaLaptop {
+    padding: 100px 0 80px 30px;
+  }
+
+  .info-item__img {
+    justify-content: start;
+  }
+}
+
+.info-item__contact {
+  position: relative;
+  padding-left: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -7px;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    @include mediaLaptop {
+      width: 18px;
+      height: 18px;
+      left: 0;
+      top: 0px;
+    }
+  }
+  &:nth-of-type(1)::before {
+    background-image: url("./../../img/contact/location.svg");
+  }
+
+  &:nth-of-type(2)::before {
+    background-image: url("./../../img/contact/sms.svg");
+  }
+
+  &:nth-of-type(3)::before {
+    background-image: url("./../../img/contact/call-calling.svg");
+  }
+}
+
+.contact__application {
+  object-fit: cover;
+  background-color: var(--dark-gray);
+  flex-shrink: 0;
+  width: 700px;
+  height: 842px;
+  padding: 100px 0 0 100px;
+
+  .title-1,
+  .subtitle {
+    color: #fff;
+  }
+
+  .info__more p {
+    color: white;
+  }
+
+  @include mediaMobile {
+    width: 375px;
+  }
+
+  @include mediaLaptop {
+    padding: 100px 0 80px 30px;
+  }
+}
+
+.contact__title {
+  margin-bottom: 53px;
+}
+
+.contact__input {
+  margin-bottom: 57px;
+}
+
+.contact__phone {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+
+  height: 564.133px;
+
+  img {
+    height: 100%;
+  }
+
+  @include mediaLaptop {
+    left: 55%;
+    top: 30%;
+    height: 400px;
+    transform: rotate(20deg);
+  }
+
+  @include mediaMobile {
+    top: 40%;
+    height: 244.047px;
+
+    transform: rotate(20deg);
+  }
+}

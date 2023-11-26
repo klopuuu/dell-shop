@@ -1,0 +1,61 @@
+.nav-btn {
+  cursor: pointer;
+  width: 49px;
+  height: 49px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+  display: none;
+
+  @include mediaTablet {
+    display: flex;
+  }
+}
+
+.btn__icon {
+  width: 30px;
+  height: 2px;
+  background-color: var(--dark-gray);
+  border-radius: 5px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    background-color: black;
+    width: 30px;
+    height: 2px;
+    border-radius: 5px;
+    left: 0;
+    background-color: var(--dark-gray);
+  }
+
+  &::before {
+    top: -8px;
+  }
+
+  &::after {
+    top: 8px;
+  }
+}
+
+.btn__icon.nav-btn--active {
+  background-color: transparent;
+}
+
+.btn__icon.nav-btn--active::before,
+.btn__icon.nav-btn--active::after {
+  top: 0;
+  transition: top var(--time) linear, transform var(--time) ease-in var(--time);
+}
+
+.btn__icon.nav-btn--active::before {
+  transform: rotate(45deg);
+}
+
+.btn__icon.nav-btn--active::after {
+  transform: rotate(-45deg);
+}

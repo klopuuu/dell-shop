@@ -1,0 +1,13 @@
+.dote {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  cursor: pointer;
+}
+
+.dote__active {
+  background-color: black !important;
+  width: 9px !important;
+  height: 9px !important;
+}

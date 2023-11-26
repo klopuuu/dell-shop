@@ -1,0 +1,62 @@
+.advantage {
+  background-color: var(--beige-color);
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 15px;
+    top: 152px;
+    width: 897px;
+    height: 100%;
+    flex-shrink: 0;
+    z-index: 0;
+
+    background-image: url("./../img/advantage/best.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.advantage__flex {
+  display: flex;
+  gap: 77px;
+  margin-bottom: 87px;
+
+  @include mediaTablet {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.advantage__body {
+  padding-top: 87px;
+  padding-bottom: 46px;
+  position: relative;
+}
+
+.advantage__info {
+  max-width: 518px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title-1 {
+    margin-bottom: 37px;
+  }
+
+  .subtitle {
+    margin-bottom: 41px;
+  }
+}
+
+.advantage__cards {
+  display: flex;
+  gap: 27px;
+
+  @include mediaTablet {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

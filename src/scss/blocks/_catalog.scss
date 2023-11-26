@@ -1,0 +1,43 @@
+.catalog__body {
+  padding-top: 188px;
+  padding-bottom: 156px;
+
+  @include mediaTablet {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+}
+
+.catalog__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.catalog__product {
+  width: 440px;
+  height: 371px;
+
+  @include mediaTablet {
+    &:nth-of-type(1) {
+      height: 100%;
+    }
+  }
+}
+
+.catalog__info {
+  max-width: 388px;
+  max-height: 311px;
+  flex-shrink: 0;
+  align-items: center;
+
+  .title-1 {
+    margin-bottom: 29px;
+  }
+
+  .subtitle {
+    margin-bottom: 46px;
+  }
+}

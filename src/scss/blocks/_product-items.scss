@@ -1,0 +1,51 @@
+.product-items {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  border-radius: 20px;
+  background-color: var(--beige-color);
+  padding: 40px;
+}
+
+.product-items__visual {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-items__info {
+  margin-top: auto;
+  display: grid;
+  gap: 5px;
+}
+
+.product-items__number {
+  color: var(--dark-gray);
+  font-family: "Roboto Thin";
+  font-size: 25px;
+  line-height: 150%;
+
+  @include mediaTablet {
+    font-size: 20px;
+  }
+}
+
+.product-items__quantity {
+  color: var(--light-gray);
+  font-family: "Roboto Light";
+  font-size: 18px;
+  line-height: 133.687%; /* 24.064px */
+
+  @include mediaTablet {
+    font-size: 15px;
+  }
+}
+
+.product-items__name {
+  color: var(--dark-gray);
+  font-size: 25px;
+  line-height: 150%; /* 37.5px */
+
+  @include mediaTablet {
+    font-size: 20px;
+  }
+}
